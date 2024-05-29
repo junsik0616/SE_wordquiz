@@ -55,7 +55,6 @@ char* read_a_line(FILE* fp)
 			curr = end + 1;
 			break;
 		}
-
 		buf_n = fread(buf, 1, sizeof(buf), fp);
 		curr = 0;
 	} while (buf_n > 0);
@@ -74,7 +73,6 @@ void print_menu() {
 //사용자로부터 명령어를 입력받는 함수
 int get_command() {
 	int cmd;
-
 	printf(">");
 	scanf("%d", &cmd);
 	return cmd;
@@ -84,7 +82,6 @@ void list_wordbooks()
 {
 
 	DIR* d = opendir("wordbooks");
-
 	printf("\n  ----\n");
 
 	struct dirent* wb;
@@ -94,7 +91,6 @@ void list_wordbooks()
 		}
 	}
 	closedir(d);
-
 	printf("  ----\n");
 }
 //단어장의 단어와 뜻을 출력하는 함수
@@ -121,11 +117,9 @@ void show_words()
 		char* meaning = strtok(NULL, "\"");
 
 		printf("  %s : %s\n", word, meaning);
-
 		free(line);
 	}
 	printf("  -----\n\n");
-
 	fclose(fp);
 }
 
@@ -138,13 +132,10 @@ void run_test()
 	printf("Type in the name of the wordbook?\n");
 	printf(">");
 	scanf("%s", wordbook);
-
 	sprintf(filepath, "wordbooks/%s", wordbook);
 
 	FILE* fp = fopen(filepath, "r");
-
 	printf("\n-----\n");
-
 	int n_questions = 0;
 	int n_correct = 0;
 
@@ -156,7 +147,6 @@ void run_test()
 
 		printf("Q. %s\n", meaning);
 		printf("?  ");
-
 		char answer[128];
 		scanf("%s", answer);
 
@@ -167,24 +157,19 @@ void run_test()
 		else {
 			printf("- wrong: %s\n", word);
 		}
-
 		n_questions++;
 		free(line);
 	}
 
 	printf("(%d/%d)\n", n_correct, n_questions);
-
 	printf("-----\n\n");
-
 	fclose(fp);
 }
 
 //메인함수
 int main()
 {
-
 	printf(" *** Word Quiz *** \n\n");
-
 	int cmd;
 	do {
 		print_menu();
@@ -195,23 +180,19 @@ int main()
 			list_wordbooks();
 			break;
 		}
-
 		case C_SHOW: {
 			show_words();
 			break;
 		}
-
 		case C_TEST: {
 			run_test();
 			break;
 		}
-
 		case C_EXIT: {
 			return EXIT_SUCCESS;
 		}
 		}
 	} while (cmd != C_EXIT);
-
 
 	return EXIT_SUCCESS;
 }
