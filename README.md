@@ -1,39 +1,39 @@
 # WordQuiz
 
-## 프로젝트 설명
-WordQuiz는 사용자의 어휘 수준을 향상시키기 위해 고안된 프로그램입니다. 이 프로그램은 기초 어휘와 고급 어휘를 선택할 수 있게 하여, 사용자가 자신에게 맞는 수준에서 단어 학습을 할 수 있도록 돕습니다.
+## Project Description
+WordQuiz is a program designed to enhance the user's vocabulary. This program allows users to select between basic and advanced vocabulary, enabling them to learn words at their appropriate level.
 
-## 주요 기능
-- **기초 어휘와 고급 어휘 선택**: 사용자는 자신의 어휘 수준에 맞는 단어를 선택할 수 있습니다.
-- **단어 의미 제공**: 사용자에게 단어의 의미를 제공하여 학습을 돕습니다.
-- **단어 입력**: 사용자는 제공된 의미를 바탕으로 단어를 입력합니다.
+## Key Features
+- **Selection of Basic and Advanced Vocabulary**: Users can choose words according to their vocabulary level.
+- **Word Definitions**: Provides users with the meanings of words to aid in learning.
+- **Word Input**: Users input words based on the provided meanings.
 
-## 사용방법
-1. **단계 선택**: 사용자 수준에 맞는 단어가 제시됩니다.
-2. **어휘 수준 선택**: 사용자가 원하는 수준(기초 또는 고급)을 선택합니다.
-3. **단어 입력**: 사용자에게 해당 수준에 맞는 어휘에 대한 설명이 제시되면, 사용자가 어휘를 입력합니다.
+## How to Use
+1. **Select Level**: Words appropriate to the user's level are presented.
+2. **Choose Vocabulary Level**: Users select the level they desire (basic or advanced).
+3. **Input Word**: Upon receiving the description of a word matching the selected level, users input the corresponding word.
 
-## 설치방법
-1. `wordquiz.c` 파일을 기본 코드로 사용합니다.
-2. `voca1`, `voca2` 파일에 있는 단어가 무작위로 출력됩니다.
-3. `voca` 파일에 새로운 단어를 추가할 수 있습니다.
+## Installation
+1. Use the 'wordquiz.c' file as the main code.
+2. Words from 'voca1' and 'voca2' files will be randomly displayed.
+3. You can add new words to the 'voca' file.
 
-## 파일 구조
-- `wordquiz.c`: 메인 프로그램 코드
-- `voca1`: 기초 어휘 목록
-- `voca2`: 고급 어휘 목록
-- `voca`: 사용자 정의 단어 목록
+## File Structure
+- `wordquiz.c`: Main program code
+- `voca1`: Basic vocabulary list
+- `voca2`: Advanced vocabulary list
+- `voca`:  User-defined word list
 
-## 실행 방법
-1. 저장소를 클론합니다:
+## How to Run
+1. clone the repository:
    ```sh
    git clone https://github.com/사용자명/WordQuiz.git
    
 
-2. 프로그램을 컴파일합니다.
+2. Compile the program:
     ```sh
     gcc wordquiz.c -o wordquiz
-3. 프로그램을 실행합니다:
+3. Run the program:
    ```sh
    ./wordquiz
 
